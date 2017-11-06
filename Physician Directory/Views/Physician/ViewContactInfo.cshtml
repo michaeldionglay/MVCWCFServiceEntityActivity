@@ -1,0 +1,86 @@
+﻿@model IEnumerable<Physician_Directory.Models.Physician>
+
+@{
+    @Styles.Render("~/Content/ViewPhysician.css")
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("ViewPhysician")
+
+    <table class="table">
+        <tr>
+            <th>
+                Physician Name
+            </th>
+            <th>
+                Home Address
+            </th>
+            <th>
+                Home Phone
+            </th>
+            <th>
+                Office Address
+            </th>
+            <th>
+                Office Phone
+            </th>
+            <th>
+                Email Address
+            </th>
+            <th>
+                Cellphone Number
+            </th>
+           
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        string fullName = item.FirstName + " " + item.LastName;
+                    }
+                    @Html.DisplayFor(modelItem => fullName)
+                </td>
+                <td>
+                    @{
+                        string homeAddress = item.ContactInfo.HomeAddress;
+                    }
+                    @Html.DisplayFor(modelItem => homeAddress)
+                </td>
+                <td>
+                    @{
+                        string homePhone = item.ContactInfo.HomePhone.ToString();
+                    }
+                    @Html.DisplayFor(modelItem => homePhone)
+                </td>
+                <td>
+                    @{
+                        string officeAddress = item.ContactInfo.OfficeAddress;
+                    }
+                    @Html.DisplayFor(modelItem => officeAddress)
+                </td>
+                <td>
+                    @{
+                        string officePhone = item.ContactInfo.OfficePhone.ToString();
+                    }
+                    @Html.DisplayFor(modelItem => officePhone)
+                </td>
+                <td>
+                    @{
+                        string emailAddress = item.ContactInfo.EmailAddress;
+                    }
+                    @Html.DisplayFor(modelItem => emailAddress)
+                </td>
+                <td>
+                    @{
+                        string cellphoneNumber = item.ContactInfo.CellphoneNumber.ToString();
+                    }
+                    @Html.DisplayFor(modelItem => cellphoneNumber)
+                </td>
+                
+            </tr>
+                        }
+
+    </table>
+

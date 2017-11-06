@@ -1,0 +1,80 @@
+﻿body {
+      font-family: 'Century Gothic';
+}
+
+
+.next-submit-button{
+    display: inline;
+    height: 40px;
+    width: 100px;
+    background-color: #0c3150;
+    padding: 0px;
+    border: none;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    left: 195px;
+     font-weight: bold;
+   
+
+
+}
+
+.previous-button{
+    display: inline;
+    height: 40px;
+    width: 100px;
+    background-color: #0c3150;
+    padding: 0px;
+    border: none;
+    position: relative;
+    color: white;
+    border-radius: 5px;
+    margin-left : 70px;
+     font-weight: bold;
+ 
+
+
+}
+
+.add-physician-info {
+    margin-top: 40px;
+    
+    height: 40px;
+    width: 220px;
+    padding: 0px;
+    border: none;
+    position: relative;
+    border-radius: 5px;
+   
+}
+.physician-info-label
+    {
+     color: #0c3150;
+     position: absolute;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 40px;
+   
+  
+}
+
+.back-to-list-button{
+    height: 30px;
+    width: 100px;
+    background-color: #0c3150;
+    padding: 0px;
+    border: none;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    left: 180px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+  
+
+}
+table {
+  border: 1px solid red;
+}

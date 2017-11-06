@@ -1,0 +1,124 @@
+﻿body {
+    font-family: 'Century Gothic';
+}
+
+
+
+.view-physician-button {
+    height: 40px;
+    width: 300px;
+    background-color: #0c3150;
+    border: none;
+    position: relative;
+    color: white;
+    margin-right: 10px;
+    margin-top: 40px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+#add-new-physician-button {
+    background-color: #0c3150;
+    height: 40px;
+    width: 200px;
+    border: none;
+    position: relative;
+    color: white;
+    margin-right: 10px;
+    margin-top: 20px;
+    font-size: large;
+   
+    font-weight: bold;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    line-height:35px;
+    border-radius: 5px;
+}
+
+.view-physician-tabs {
+    overflow: hidden;
+    border: #0c3150;
+    background-color: #0c3150;
+    margin-bottom: 10px;
+    font-weight: bold;
+  
+    color: white;
+}
+
+    .view-physician-tabs a {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        color: white;
+    }
+
+        .view-physician-tabs a:hover {
+            background-color: #ddd;
+            text-decoration: none;
+            transition-duration: 0.5s;
+            color: #0c3150;
+        }
+
+
+
+a.my-class:active {
+    color: #0c3150;
+}
+
+#view-physician-search-button {
+    background-color: #0c3150;
+    border: 1px solid #0c3150;
+    color: white;
+  
+    font-weight: bold;
+    border-radius: 5px;
+    height: 30px;
+}
+
+#view-physician-search-box {
+    height: 30px;
+    width: 300px;
+    border: 1px solid #0c3150;
+    position: relative;
+    margin-left: 135px;
+}
+
+#view-physician-search-label {
+    color: #0c3150;
+    font-weight: bold;
+    display: inline-block;
+   margin-left: 10px;
+     height: 30px;
+    width: 120px;
+    position: absolute;
+    margin-right: 10px;
+  vertical-align: middle;
+  text-align: center;
+    
+    
+}
+
+a.edit-icon{
+    background: url(https://www.shareicon.net/download/2017/02/09/878606_edit_512x512.png) no-repeat;
+    background-size: 25px;
+    display: inline-block;
+     width: 25px;
+     height: 25px;
+    
+  
+ 
+
+}
+
+a.delete-icon {
+    background: url(http://docs.qgis.org/2.14/pl/_images/mActionDeleteSelected.png) no-repeat;
+    background-size: 25px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}

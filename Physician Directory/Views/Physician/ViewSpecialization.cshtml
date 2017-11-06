@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Physician_Directory.Models.Physician>
+
+@{
+    @Styles.Render("~/Content/ViewPhysician.css")
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("ViewPhysician")
+    <table class="table">
+        <tr>
+            <th>
+                Physician Name
+            </th>
+            <th>
+               Specialization
+            </th>
+            <th>
+                Description
+            </th>
+      
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @{
+                    string fullName = item.FirstName + " " + item.LastName;
+                }
+                @Html.DisplayFor(modelItem => fullName)
+            </td>
+            <td>
+                @{
+                    string specialization = item.Specialization.Name;
+                }
+                @Html.DisplayFor(modelItem => specialization)
+            </td>
+            <td>
+                @{
+                    string description = item.Specialization.Description;
+                }
+                @Html.DisplayFor(modelItem => description)
+            </td>
+      
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

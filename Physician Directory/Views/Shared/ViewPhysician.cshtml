@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "View";
+}
+@Styles.Render("~/Content/css")
+
+@Styles.Render("~/Content/ViewPhysician.css")
+@using Physician_Directory.Utilities;
+
+<p>
+    @Html.ActionLink("Add New Physician", "CreatePhysician", null, new { @id = "add-new-physician-button" })
+</p>
+
+<div class="view-physician-tabs">
+    @Html.ActionLink("Personal Information", "Index", null, new {@class = "my-class"} )
+
+
+    @Html.ActionLink("Contact Information", "ViewContactInfo", null, new { @class = "my-class" })
+
+    @Html.ActionLink("Specialization", "ViewSpecialization", null, new { @class = "my-class" })
+</div>
+
+
+
+
+
+
+
+
+
+

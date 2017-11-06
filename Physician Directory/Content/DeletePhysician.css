@@ -1,0 +1,59 @@
+﻿.back-to-list-button {
+    height: 35px;
+    width: 100px;
+    background-color: #0c3150;
+    padding: 0px;
+    border: none;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    left: 260px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    font-family: 'Century Gothic';
+}
+
+#delete-button {
+    height: 35px;
+    width: 100px;
+    background-color: #0c3150;
+    padding: 0px;
+    border: none;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    left: 150px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    font-family: 'Century Gothic';
+}
+
+.delete-page-label {
+    color: #0c3150;
+    position: relative;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 40px;
+    font-family: 'Century Gothic';
+}
+
+h4{
+color: #0c3150;
+  font-weight: bold;
+   font-family: 'Century Gothic';
+}
+dt{
+color: #0c3150;
+  font-weight: bold;
+   font-family: 'Century Gothic';
+}
+
+dd{
+
+  font-weight: normal;
+   font-family: 'Century Gothic';
+}
+
+

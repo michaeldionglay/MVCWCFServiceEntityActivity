@@ -1,0 +1,163 @@
+﻿.hims-menu{
+    height: 200px;
+    width: 270px;
+    background-color: rgba(255, 255, 255, 0.45);
+    margin-top: 10px;
+    display: inline-block;
+  margin-left: 50px;
+    position: relative;
+    margin-right: 50px;
+    border: 2px solid #0c3150;
+    position: relative;
+    
+}
+
+#physician-directory-menu{
+    color: white;
+    position: absolute;
+   text-align:center;
+   font-size: large;
+   display: inline;
+  
+}
+#menu{
+    width: 100%;
+    height: 500px;
+   
+    position: absolute;
+     margin-top: 20px;
+
+}
+
+p {
+    font-weight: bold;
+    font-size: 13px;
+    color: black;
+
+}
+
+h4{
+    color: rgba(15, 46, 70, 1);
+    font-weight: bold;
+}
+
+#view-physician-directory{
+   background-color: #0c3150;
+    height: 25px;
+    width: 200px;
+    border: none;
+    position: relative;
+    color: white;
+    margin-left: 30px;
+   
+    font-size: medium;
+   
+    font-weight: bold;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    line-height:25px;
+    border-radius: 10px;
+}
+
+#icon{
+    height: 30px;
+    width: 30px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+#view-accounting{
+   background-color: #0c3150;
+    height: 25px;
+    width: 240px;
+    border: none;
+    position: relative;
+    color: white;
+    margin-left: 10px;
+   
+    font-size: medium;
+   
+    font-weight: bold;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    line-height:25px;
+    border-radius: 10px;
+}
+
+#view-pharmacy-inventory{
+   background-color: #0c3150;
+    height: 25px;
+    width: 240px;
+    border: none;
+    position: relative;
+    color: white;
+    margin-left: 10px;
+   
+    font-size: medium;
+   
+    font-weight: bold;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    line-height:25px;
+    border-radius: 10px;
+}
+
+#in-patient-monitoring{
+   background-color: #0c3150;
+    height: 25px;
+    width: 240px;
+    border: none;
+    position: relative;
+    color: white;
+    margin-left: 10px;
+   
+    font-size: medium;
+   
+    font-weight: bold;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    line-height:25px;
+    border-radius: 10px;
+}
+
+#patient-medical-history{
+   background-color: #0c3150;
+    height: 25px;
+    width: 240px;
+    border: none;
+    position: relative;
+    color: white;
+    margin-left: 10px;
+   
+    font-size: medium;
+   
+    font-weight: bold;
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    line-height:25px;
+    border-radius: 10px;
+}
+
+#hims-icon{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    margin-left:860px;
+     margin-top:-200px;
+    
+}
+
+#hims-label{
+    position: absolute;
+  color: #0c3150;
+    margin-left:750px;
+     margin-top:-40px;
+    
+}
+
+

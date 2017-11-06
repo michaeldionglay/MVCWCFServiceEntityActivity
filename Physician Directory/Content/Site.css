@@ -1,0 +1,66 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+      font-family: 'Century Gothic';
+       font-weight: bold;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#background-img{
+    background-image:url(https://media.licdn.com/mpr/mpr/AAEAAQAAAAAAAApjAAAAJDhiYzhjZDNmLTg4ZjYtNGUxOC05MDJjLTc4ZThmNmMxNTRkNg.png);
+    background-size: 100%;
+   background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
+
+	
+}
+
+
+#page-footer {
+   
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: left;
+    height: 40px;
+    background-color:rgba(15, 46, 70, 1);
+    
+    vertical-align: middle;
+  
+   
+  
+ 
+}
+
+footer p{
+    margin-left: 10px;
+    margin-top: 10px;
+    position: absolute;
+    color: white;
+    font-weight: normal;
+    font-size:small;
+}
+

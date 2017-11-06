@@ -1,0 +1,136 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@Styles.Render("~/Content/css")
+@Styles.Render("~/Content/Home.css")
+
+<div id="menu">
+
+
+    <div class="hims-menu">
+        <div id="physician-directory-menu">
+            <h4> Physician Directory</h4>
+            <p>At HIMS, our mission is to improve the health of people through excellence in patient care and medical discovery. With more than 1300 full-time physicians, we are honored to serve you.</p>
+
+
+            @Html.ActionLink(">> Physician Directory", "Index", "Physician", null, new { @id = "view-physician-directory" })
+
+        </div>
+
+    </div>
+
+    <div class="hims-menu">
+        <div id="physician-directory-menu">
+            <h4>Appointment Request Calendar</h4>
+            <p>
+                To get started, simply click on <a href="www.google.com">Request an Appointment</a>.
+                <br />
+
+                Our scheduling office will contact you to schedule your appointment!
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="hims-menu">
+        <div id="physician-directory-menu">
+            <h4> Accounting and Billing</h4>
+            <p>
+                If you have questions about your bill, please contact our hospital business office at 540-316-2970. For questions about your bill, call Patient Accounts at 540-316-2973.
+            </p>
+            @Html.ActionLink(">> Accounting and Billing", "Index", "Physician", null, new { @id = "view-accounting" })
+        </div>
+
+    </div>
+
+    <div class="hims-menu">
+        <div id="physician-directory-menu">
+            <h4>Pharmacy Inventory</h4>
+            <p>The Helix inventory control and purchase order system is a realtime perpetual inventory system.</p>
+            @Html.ActionLink(">> Pharmacy Inventory", "Index", "Physician", null, new { @id = "view-pharmacy-inventory" })
+        </div>
+
+    </div>
+
+
+
+
+    <div class="hims-menu">
+        <div id="physician-directory-menu">
+            <h4> In-patient Monitoring</h4>
+            <p>Activity monitoring has the potential to engage patients as advocates in their personalized care, as well as offer health care providers real world assessments of their patients’ daily activity patterns.</p>
+            @Html.ActionLink(">> In-Patient Monitorning", "Index", "Physician", null, new { @id = "in-patient-monitoring" })
+        </div>
+
+    </div>
+
+    <div class="hims-menu">
+        <div id="physician-directory-menu">
+            <h4>Room / Equipment Reservation</h4>
+            <p>To request a room or equipment reservation click <a href="www.google.com">here</a>.</p>
+            <br />
+        </div>
+
+    </div>
+
+    <div class="hims-menu">
+        <div id="physician-directory-menu">
+            <h4>Patient Medical History</h4>
+            <p>A medical record is a complete information of a patient’s key clinical data and medical history, such as vital signs, diagnoses, medications, treatment plans, allergies, radiology images, and laboratory results.</p>
+            @Html.ActionLink(">> Patient Medical History", "Index", "Physician", null, new { @id = "patient-medical-history" })
+        </div>
+
+    </div>
+
+    <div class="hims-menu">
+        <div id="physician-directory-menu">
+            <h4>  User Account Administration</h4>
+            <p>Update account information <a href="www.google.com">here</a>.</p>
+
+        </div>
+
+    </div>
+
+   
+
+
+    <div>
+        <img src="http://www.ramiromedical.org/images/ramiro-logo-fix.png" id="hims-icon" />
+        <h4 id="hims-label">Hospital Information Management System</h4>
+
+
+    </div>
+
+
+
+</div>
+
+<!-- <div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+    -->

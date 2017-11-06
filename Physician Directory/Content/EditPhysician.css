@@ -1,0 +1,42 @@
+﻿h3, h4{
+    color: #0c3150;
+  font-weight: bold;
+   font-family: 'Century Gothic';
+}
+
+#edit-save-button {
+    height: 40px;
+    width: 100px;
+    background-color: #0c3150;
+    padding: 0px;
+    border: none;
+    position: relative;
+    color: white;
+    border-radius: 5px;
+   
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Century Gothic';
+    float: right;
+}
+
+.edit-back-to-list-button {
+    height: 40px;
+    width: 100px;
+    background-color: #0c3150;
+    padding: 0px;
+    border: none;
+    position: relative;
+    color: white;
+    border-radius: 5px;
+    left: 180px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    float: right;
+    margin-right: 190px;
+}
+
+#spec-description-textbox{
+    height: 80px;
+}

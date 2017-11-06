@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Physician_Directory.Models.Physician>
+
+
+
+
+
+@Html.Partial("ViewPhysician")
+@using (Html.BeginForm())
+{
+    <p>
+       <div id="view-physician-search-label">
+    Search by Name:
+    </div>
+        @Html.TextBox("searchstring", null, new { @id = "view-physician-search-box" })
+
+        <input type="submit" value="Search" id="view-physician-search-button" />
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Physician Name
+            </th>
+            <th>
+                Birthdate
+            </th>
+            <th>
+                Gender
+            </th>
+            <th>
+                Weight
+            </th>
+            <th>
+                Height
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+
+                <td>
+                    @{
+                        string name = item.FirstName +" " + item.LastName;
+                    }
+                    @Html.DisplayFor(modelItem => name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Height)
+                </td>
+                <td>
+                    @Html.ActionLink(" ", "EditPhysician", new { id = item.Id }, new { @class = "edit-icon" }) 
+                    @Html.ActionLink(" ", "DeletePhysician", new { id = item.Id }, new { @class = "delete-icon" })
+                </td>
+            </tr>
+                        }
+
+
+    </table>
+ }
