@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MyService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55988/MyService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55988/MyService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55988/MyService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/PhysicianDirectoryService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMyService_GetPhysician_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysician" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_GetPhysician_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicianResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddPhysician_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPhysician" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_AddPhysician_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPhysicianResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_GetPhysicianById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicianById" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_GetPhysicianById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicianByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_UpdatePhysician_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhysician" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_UpdatePhysician_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePhysicianResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeletePhysicianById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePhysicianById" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_DeletePhysicianById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePhysicianByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_GetPhysicianByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicianByName" />
+  </wsdl:message>
+  <wsdl:message name="IMyService_GetPhysicianByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPhysicianByNameResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMyService">
+    <wsdl:operation name="GetPhysician">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/GetPhysician" message="tns:IMyService_GetPhysician_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/GetPhysicianResponse" message="tns:IMyService_GetPhysician_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPhysician">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/AddPhysician" message="tns:IMyService_AddPhysician_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/AddPhysicianResponse" message="tns:IMyService_AddPhysician_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicianById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/GetPhysicianById" message="tns:IMyService_GetPhysicianById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/GetPhysicianByIdResponse" message="tns:IMyService_GetPhysicianById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhysician">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/UpdatePhysician" message="tns:IMyService_UpdatePhysician_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/UpdatePhysicianResponse" message="tns:IMyService_UpdatePhysician_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhysicianById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/DeletePhysicianById" message="tns:IMyService_DeletePhysicianById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/DeletePhysicianByIdResponse" message="tns:IMyService_DeletePhysicianById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicianByName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMyService/GetPhysicianByName" message="tns:IMyService_GetPhysicianByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMyService/GetPhysicianByNameResponse" message="tns:IMyService_GetPhysicianByName_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMyService" type="tns:IMyService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPhysician">
+      <soap:operation soapAction="http://tempuri.org/IMyService/GetPhysician" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPhysician">
+      <soap:operation soapAction="http://tempuri.org/IMyService/AddPhysician" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicianById">
+      <soap:operation soapAction="http://tempuri.org/IMyService/GetPhysicianById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePhysician">
+      <soap:operation soapAction="http://tempuri.org/IMyService/UpdatePhysician" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePhysicianById">
+      <soap:operation soapAction="http://tempuri.org/IMyService/DeletePhysicianById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPhysicianByName">
+      <soap:operation soapAction="http://tempuri.org/IMyService/GetPhysicianByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MyService">
+    <wsdl:port name="BasicHttpBinding_IMyService" binding="tns:BasicHttpBinding_IMyService">
+      <soap:address location="http://localhost:55988/MyService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -8,7 +9,7 @@ namespace Physician_Directory.Models
 {
     public class ContactInfo
     {
-
+      
         public int PhysicianId { get; set; }
 
         [Display(Name = "Home Address")]
@@ -34,9 +35,11 @@ namespace Physician_Directory.Models
         [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string EmailAddress { get; set; }
 
-        [Display(Name = "Office Phone")]
+        [Display(Name = "Cellphone Number")]
         [Required(ErrorMessage = "Office Phone is required.")]
         [RegularExpression(@"^([0-9]{11})$", ErrorMessage = "Invalid Office Phone.")]
         public string CellphoneNumber { get; set; }
+
+
     }
 }

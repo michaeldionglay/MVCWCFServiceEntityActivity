@@ -1,19 +1,17 @@
 ﻿@model IEnumerable<Physician_Directory.Models.Physician>
 
-@{
-    @Styles.Render("~/Content/ViewPhysician.css")
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@Styles.Render("~/Content/ViewPhysician.css")
+  @Styles.Render(Layout = "~/Views/Shared/_Layout.cshtml")
+
 
 @Html.Partial("ViewPhysician")
-
     <table class="table">
         <tr>
             <th>
                 Physician Name
             </th>
             <th>
-                Home Address
+               Home Address
             </th>
             <th>
                 Home Phone
@@ -30,57 +28,43 @@
             <th>
                 Cellphone Number
             </th>
-           
+            
+            <th></th>
         </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @{
-                        string fullName = item.FirstName + " " + item.LastName;
-                    }
-                    @Html.DisplayFor(modelItem => fullName)
-                </td>
-                <td>
-                    @{
-                        string homeAddress = item.ContactInfo.HomeAddress;
-                    }
-                    @Html.DisplayFor(modelItem => homeAddress)
-                </td>
-                <td>
-                    @{
-                        string homePhone = item.ContactInfo.HomePhone.ToString();
-                    }
-                    @Html.DisplayFor(modelItem => homePhone)
-                </td>
-                <td>
-                    @{
-                        string officeAddress = item.ContactInfo.OfficeAddress;
-                    }
-                    @Html.DisplayFor(modelItem => officeAddress)
-                </td>
-                <td>
-                    @{
-                        string officePhone = item.ContactInfo.OfficePhone.ToString();
-                    }
-                    @Html.DisplayFor(modelItem => officePhone)
-                </td>
-                <td>
-                    @{
-                        string emailAddress = item.ContactInfo.EmailAddress;
-                    }
-                    @Html.DisplayFor(modelItem => emailAddress)
-                </td>
-                <td>
-                    @{
-                        string cellphoneNumber = item.ContactInfo.CellphoneNumber.ToString();
-                    }
-                    @Html.DisplayFor(modelItem => cellphoneNumber)
-                </td>
-                
-            </tr>
-                        }
-
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @{
+                    string fullName = item.FirstName + " " + item.LastName;
+                }
+                @Html.DisplayFor(modelItem => fullName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactInfo.HomeAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactInfo.HomePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactInfo.OfficeAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactInfo.OfficePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactInfo.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactInfo.CellphoneNumber)
+            </td>
+            
+            <td>
+                @Html.ActionLink(" ", "EditPhysician", new { id = item.Id }, new { @class = "edit-icon" })
+                @Html.ActionLink(" ", "DeletePhysician", new { id = item.Id }, new { @class = "delete-icon" })
+            </td>
+        </tr>
+    }
+    
     </table>
 

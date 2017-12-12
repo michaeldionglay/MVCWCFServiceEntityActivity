@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 
 namespace Physician_Directory.Models
@@ -44,7 +46,13 @@ namespace Physician_Directory.Models
             }
         }
 
+      
+
+
     }
-    }
+
+ 
+    
+}
     
     

@@ -1,9 +1,7 @@
 ﻿@model IEnumerable<Physician_Directory.Models.Physician>
 
-@{
     @Styles.Render("~/Content/ViewPhysician.css")
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+    @Styles.Render(Layout = "~/Views/Shared/_Layout.cshtml")
 
 @Html.Partial("ViewPhysician")
     <table class="table">
@@ -17,7 +15,7 @@
             <th>
                 Description
             </th>
-      
+            <th></th>
         </tr>
     
     @foreach (var item in Model) {
@@ -29,21 +27,17 @@
                 @Html.DisplayFor(modelItem => fullName)
             </td>
             <td>
-                @{
-                    string specialization = item.Specialization.Name;
-                }
-                @Html.DisplayFor(modelItem => specialization)
+                @Html.DisplayFor(modelItem => item.Specialization.Name)
+            </td>
+            <td>  
+                @Html.DisplayFor(modelItem => item.Specialization.Description)
             </td>
             <td>
-                @{
-                    string description = item.Specialization.Description;
-                }
-                @Html.DisplayFor(modelItem => description)
+                @Html.ActionLink(" ", "EditPhysician", new { id = item.Id }, new { @class = "edit-icon" })
+                @Html.ActionLink(" ", "DeletePhysician", new { id = item.Id }, new { @class = "delete-icon" })
             </td>
-      
         </tr>
     }
     
     </table>
-</body>
-</html>
+
