@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhysicianDirectoryService", "PhysicianDirectoryService\PhysicianDirectoryService.csproj", "{333975F2-DAB7-4416-A97D-31EE7929CBFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Physician Directory", "..\Physician Directory\Physician Directory\Physician Directory.csproj", "{47A5C4B7-444B-4632-A4F2-E3CB3E5A67BB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{333975F2-DAB7-4416-A97D-31EE7929CBFD} = {333975F2-DAB7-4416-A97D-31EE7929CBFD}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{333975F2-DAB7-4416-A97D-31EE7929CBFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333975F2-DAB7-4416-A97D-31EE7929CBFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333975F2-DAB7-4416-A97D-31EE7929CBFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333975F2-DAB7-4416-A97D-31EE7929CBFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47A5C4B7-444B-4632-A4F2-E3CB3E5A67BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A5C4B7-444B-4632-A4F2-E3CB3E5A67BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A5C4B7-444B-4632-A4F2-E3CB3E5A67BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A5C4B7-444B-4632-A4F2-E3CB3E5A67BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
