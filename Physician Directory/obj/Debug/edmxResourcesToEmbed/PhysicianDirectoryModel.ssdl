@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PhysicianDirectoryModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PhysicianDirectoryModelStoreContainer">
+    <EntitySet Name="Physicians" EntityType="PhysicianDirectoryModel.Store.Physicians" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContactInformations" EntityType="PhysicianDirectoryModel.Store.ContactInformations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Specializations" EntityType="PhysicianDirectoryModel.Store.Specializations" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="PhysicianContactInformation" Association="PhysicianDirectoryModel.Store.PhysicianContactInformation">
+      <End Role="Physician" EntitySet="Physicians" />
+      <End Role="ContactInformation" EntitySet="ContactInformations" />
+    </AssociationSet>
+    <AssociationSet Name="PhysicianSpecialization" Association="PhysicianDirectoryModel.Store.PhysicianSpecialization">
+      <End Role="Physician" EntitySet="Physicians" />
+      <End Role="Specialization" EntitySet="Specializations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Physicians">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MiddleName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" Nullable="false" />
+    <Property Name="Gender" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Height" Type="float" Nullable="false" />
+    <Property Name="Weight" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ContactInformations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HomePhone" Type="float" Nullable="false" />
+    <Property Name="HomeAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OfficeAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OfficePhone" Type="float" Nullable="false" />
+    <Property Name="EmailAddress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CellphoneNumber" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Specializations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="PhysicianContactInformation">
+    <End Role="Physician" Type="PhysicianDirectoryModel.Store.Physicians" Multiplicity="1" />
+    <End Role="ContactInformation" Type="PhysicianDirectoryModel.Store.ContactInformations" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Physician">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContactInformation">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PhysicianSpecialization">
+    <End Role="Physician" Type="PhysicianDirectoryModel.Store.Physicians" Multiplicity="1" />
+    <End Role="Specialization" Type="PhysicianDirectoryModel.Store.Specializations" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Physician">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Specialization">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

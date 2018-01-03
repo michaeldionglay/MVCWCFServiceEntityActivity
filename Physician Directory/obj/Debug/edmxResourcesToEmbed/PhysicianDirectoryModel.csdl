@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="PhysicianDirectoryModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="PhysicianDirectoryModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Physicians" EntityType="PhysicianDirectoryModel.Physician" />
+    <EntitySet Name="ContactInformations" EntityType="PhysicianDirectoryModel.ContactInformation" />
+    <AssociationSet Name="PhysicianContactInformation" Association="PhysicianDirectoryModel.PhysicianContactInformation">
+      <End Role="Physician" EntitySet="Physicians" />
+      <End Role="ContactInformation" EntitySet="ContactInformations" />
+    </AssociationSet>
+    <EntitySet Name="Specializations" EntityType="PhysicianDirectoryModel.Specialization" />
+    <AssociationSet Name="PhysicianSpecialization" Association="PhysicianDirectoryModel.PhysicianSpecialization">
+      <End Role="Physician" EntitySet="Physicians" />
+      <End Role="Specialization" EntitySet="Specializations" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Physician">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" />
+    <Property Name="MiddleName" Type="String" Nullable="false" />
+    <Property Name="LastName" Type="String" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" />
+    <Property Name="Gender" Type="String" Nullable="false" />
+    <Property Name="Height" Type="Double" Nullable="false" />
+    <Property Name="Weight" Type="Double" Nullable="false" />
+    <NavigationProperty Name="ContactInformation" Relationship="PhysicianDirectoryModel.PhysicianContactInformation" FromRole="Physician" ToRole="ContactInformation" />
+    <NavigationProperty Name="Specialization" Relationship="PhysicianDirectoryModel.PhysicianSpecialization" FromRole="Physician" ToRole="Specialization" />
+  </EntityType>
+  <EntityType Name="ContactInformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Physician" Relationship="PhysicianDirectoryModel.PhysicianContactInformation" FromRole="ContactInformation" ToRole="Physician" />
+    <Property Name="HomePhone" Type="Double" Nullable="false" />
+    <Property Name="HomeAddress" Type="String" Nullable="false" />
+    <Property Name="OfficeAddress" Type="String" Nullable="false" />
+    <Property Name="OfficePhone" Type="Double" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" Nullable="false" />
+    <Property Name="CellphoneNumber" Type="Double" Nullable="false" />
+  </EntityType>
+  <Association Name="PhysicianContactInformation">
+    <End Type="PhysicianDirectoryModel.Physician" Role="Physician" Multiplicity="1" />
+    <End Type="PhysicianDirectoryModel.ContactInformation" Role="ContactInformation" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Physician">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContactInformation">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Specialization">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <NavigationProperty Name="Physician" Relationship="PhysicianDirectoryModel.PhysicianSpecialization" FromRole="Specialization" ToRole="Physician" />
+  </EntityType>
+  <Association Name="PhysicianSpecialization">
+    <End Type="PhysicianDirectoryModel.Physician" Role="Physician" Multiplicity="1" />
+    <End Type="PhysicianDirectoryModel.Specialization" Role="Specialization" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Physician">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Specialization">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
